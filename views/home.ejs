@@ -1,0 +1,11 @@
+<%-include("partials/header") -%>
+<h1>Hello World</h1>
+<p><%=homecontent %></p>
+
+<% posts.forEach((element)=>{ %>
+    <h1><%= element.title %></h1>
+    <p><%= loDash.truncate(element.postData,{'length':100}) %><a href="/posts/<%=element.title%>"> Read More</a></p>
+    
+<% }) %>
+
+<%-include("partials/footer") -%>
